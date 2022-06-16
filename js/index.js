@@ -23,6 +23,17 @@ App = {
            
         }
     },
+    getTokenId:function(){
+        var query = window.location.search.substring(1);
+        var vars = query.split("/");
+        // for (var i=0;i<vars.length;i++) {
+        //         var pair = vars[i].split("=");
+        //         if(pair[0] == variable){return pair[1];}
+        // }
+        var id = vars[vars.length-1]
+        var walletp = document.getElementById('tokenid');
+        walletp.innerText = id;
+    },
     initWeb3: function () {
         // Initialize web3 and set the provider to the testRPC.
         if (typeof window.ethereum != 'undefined') {
