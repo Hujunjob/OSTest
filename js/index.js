@@ -28,6 +28,7 @@ App = {
         if (typeof window.ethereum != 'undefined') {
             if (printLog) console.log("Metamask is installed!");
             App.web3Provider = window.ethereum;
+            if (printLog) console.log(window.ethereum);
             web3 = new Web3(window.ethereum);
             window.ethereum.on('accountsChanged', (accounts) => {
                 // Handle the new accounts, or lack thereof.
