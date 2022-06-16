@@ -36,6 +36,9 @@ App = {
         if(printLog)console.log("getTokenId "+id)
         walletp.innerText = id;
     },
+    openURL:function(){
+        window.open("https://hujunjob.github.io/OSTest/", "_blank");
+    },
     initWeb3: function () {
         // Initialize web3 and set the provider to the testRPC.
         if (typeof window.ethereum != 'undefined') {
