@@ -25,6 +25,7 @@ App = {
     },
     getTokenId:function(){
         var query = window.location.search.substring(1);
+        if(printLog)console.log("getTokenId url="+query)
         var vars = query.split("/");
         // for (var i=0;i<vars.length;i++) {
         //         var pair = vars[i].split("=");
@@ -32,6 +33,7 @@ App = {
         // }
         var id = vars[vars.length-1]
         var walletp = document.getElementById('tokenid');
+        if(printLog)console.log("getTokenId "+id)
         walletp.innerText = id;
     },
     initWeb3: function () {
